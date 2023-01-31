@@ -7,7 +7,7 @@ export const Input = styled.input`
 
     
     display: flex;
-    position: fixed;
+    position: relative;
     justify-content: center;
     width: 400px;
     height: 50px;
