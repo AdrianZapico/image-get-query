@@ -14,7 +14,7 @@ export const Input = styled.input`
     background: #d8ab91;
     color: black;
     font-size: 25px;
-    margin-left: 355px ;
+    margin-left: 400px ;
     
     @media screen and (max-width:800px)
     {
