@@ -5,6 +5,8 @@ import { useState } from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import {Input} from './style'
 
+import {FcPicture} from 'react-icons/fc'
+
 function Home() {
     const [key,setKey] = useState('image')
     
@@ -25,12 +27,13 @@ function Home() {
 
     return (
   <>
-  <div className="App">
+  <div style={{textAlign:"center"}}>
     <NavBar/>
     
-        {isFetching && <p>Loading...</p>}
-  
+        {isFetching && <p>Get Image...<FcPicture/></p>}
+      
         <Input type="text"
+        style={{textAlign:"center"}}
         onChange={(e)=> setKey(e.target.value)}
         
         />
