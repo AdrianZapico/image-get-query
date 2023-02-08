@@ -5,14 +5,14 @@ import { useState } from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import {Input} from './style'
 import {FcPicture} from 'react-icons/fc'
-//lwc1VLhcTz44odhG50G60qRANpyWNIHfNeKzz3Ba6xeAWAP2Efrz9ckD
+
 function Home() {
     const [key,setKey] = useState('image')
     
     const { data, isFetching } = useQuery(`${key}`, async () => {
-      const response = await axios.get(`https://joeytafolla123c.korconnect.io/PexelVercel/search?query=${key}`, {
+      const response = await axios.get(`https://api.pexels.com/v1/search?query=${key}`, {
         headers: {
-          headers : { "API_KEY": "K7gizNM8zS8y9AJiV0roD2Ygrn7jNIbw7tYjzie2" }
+          'Authorization': 'lwc1VLhcTz44odhG50G60qRANpyWNIHfNeKzz3Ba6xeAWAP2Efrz9ckD'
         }
       })
       return response.data.photos
